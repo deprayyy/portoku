@@ -78,7 +78,7 @@ export default function HeroPhoto() {
           "
         >
           <Image
-            src="/profile1.png"
+            src="/profile1.PNG"
             alt="Ade Prayoga Nugraha"
             fill
             priority
