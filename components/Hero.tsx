@@ -13,7 +13,7 @@ export default function Hero() {
         relative
         min-h-[calc(100vh-80px)]
         flex items-center
-        overflow-hidden
+        overflow-x-clip
         px-6 sm:px-10 lg:px-24
         pt-10 pb-24
 
@@ -27,7 +27,7 @@ export default function Hero() {
       {/* ================= BACKGROUND ================= */}
       <div className="absolute inset-0 -z-10">
 
-        {/* ☀️ LIGHT GRADIENT */}
+        {/* Gradient */}
         <div
           className="
             absolute inset-0
@@ -37,11 +37,14 @@ export default function Hero() {
           "
         />
 
-        {/* ☀️ LIGHT GLOW */}
+        {/* Glow — focus to right (photo) */}
         <div
           className="
-            absolute top-1/4 left-1/2 -translate-x-1/2
-            w-[70%] h-[60%]
+            absolute
+            top-1/4
+            right-0
+            w-[55%]
+            h-[60%]
             bg-blue-300/25
             dark:bg-blue-500/10
             blur-[160px]
@@ -50,8 +53,18 @@ export default function Hero() {
       </div>
 
       <Reveal>
-        <div className="mx-auto max-w-7xl grid gap-16 md:grid-cols-2 items-center">
-
+        <div
+          className="
+            relative
+            mx-auto
+            max-w-[1400px]
+            grid
+            gap-16
+            md:grid-cols-[1.1fr_0.9fr]
+            xl:grid-cols-[1.2fr_1fr]
+            items-center
+          "
+        >
           {/* ================= TEXT ================= */}
           <div className="order-2 md:order-1 space-y-7 md:pr-12">
 
